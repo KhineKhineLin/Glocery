@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:glocery/screens/onboard_screen.dart';
+import 'package:glocery/screens/welcome_screen.dart';
 
 import 'screens/register_screen.dart';
 
@@ -28,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       Duration(seconds: 3),(){
         Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context)=>RegisterScreen()));
+          context, MaterialPageRoute(builder: (context)=>WelcomeScreen()));
       }
     );
     super.initState();
