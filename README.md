@@ -1,4 +1,4 @@
-# glocery
+# Glocery Flutter
 
 A new Flutter project.
 
