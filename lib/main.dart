@@ -14,11 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.deepOrangeAccent),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
   }
 }
+
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -27,21 +29,18 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(
-      Duration(seconds: 3),(){
-        Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context)=>WelcomeScreen()));
-      }
-    );
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
+    });
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Hero(
-          tag: 'logo',
-          child: Image.asset('images/logo.jpg')),
+        child: Hero(tag: 'logo', child: Image.asset('images/logo.jpg')),
       ),
     );
   }
